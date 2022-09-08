@@ -1,0 +1,135 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+.top-bar {
+    text-align: center;
+    background-color: black;
+    color: bisque;
+    width: fit-content;
+    display: block;
+    margin: auto auto 5px auto;
+    padding: 10px;
+    border-radius: 17px;
+    box-shadow: 2px 5px 8px 2px white;
+}
+#div{
+    margin-top: 20px;
+    background-color: aqua;
+    padding: 20px;
+    width: 30%;
+}
+.row span{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.8rem;
+}
+li{
+    background-color: cadetblue;
+    margin-bottom: 10px;
+    padding: 10px;
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.721);
+}
+ul .playing{
+    background-color: red;
+    pointer-events: none;
+}
+.controls img{
+    width: 30px;
+}
+.controls{
+    display: flex;
+}
+
+.img-area img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.song-details{
+    text-align: center;
+    margin: 5px 0;
+}
+.song-details .name{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.0rem;
+}
+.song-details .artiste{
+    font-size: 1.0rem;
+    opacity: 0.9;
+}
+.progress-area{
+    height: 6px;
+    width: 100%;
+    background-color: wheat;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.progress-area .progress-bar{
+    height: inherit;
+    width: 0;
+    position: relative;
+    border-radius: inherit;
+    background-color: red;
+}
+.progress-bar::before{
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color: black;
+    border-radius: inherit;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -5px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.progress-area:hover .progress-bar::before{
+    opacity: 1;
+}
+.timer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.controls{
+    display: flex;
+    justify-content: space-around;
+}
+#pausePlayBtn{
+    width: 50px;
+    background-color: red;
+    border-radius: 50%;
+}
+@media screen and (max-width: 600px) {
+    body{
+        display: block;
+        margin: auto;
+        padding: 10px;
+    }
+    #div{
+        width: 90%;
+        position: sticky;
+        top: 0;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        border-radius: 10px;
+    }
+    ul{
+        display: block;
+        width: 90%;
+        margin: auto;
+    }
+}
